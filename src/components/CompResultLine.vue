@@ -1,10 +1,10 @@
 <template>
     <div class="row">
-        <div class="col-sm text-right">
+        <div class="col-sm-4 text-right">
             {{ name }}
         </div>
-        <div class="col-sm">
-            {{ url }}
+        <div class="col-sm-8">
+            <a :href="url">{{ url }}</a>
         </div>
     </div>
 </template>

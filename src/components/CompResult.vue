@@ -1,10 +1,13 @@
 <template>
     <div>
-        <comp-result-line v-for="(result, key) in data"
-                          :name="result.name"
-                          :url="result.url"
-                          :key="key">
-        </comp-result-line>
+        <div v-if="data.length < 1">No results</div>
+        <div v-else>
+            <comp-result-line v-for="(result, key) in data"
+                              :name="result.name"
+                              :url="result.url"
+                              :key="key">
+            </comp-result-line>
+        </div>
     </div>
 </template>
 
