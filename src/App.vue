@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <h1 style="padding: 3rem 1.5rem; text-align: center;">Github Repo Browser</h1>
+        <h1 class="app-header">Github Repo Browser</h1>
 
         <comp-search></comp-search>
 
@@ -28,5 +28,10 @@
 </script>
 
 <style scoped>
+
+    .app-header {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
 
 </style>
