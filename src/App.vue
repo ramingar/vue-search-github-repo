@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+    <div class="container">
+
+        <h1 style="padding: 3rem 1.5rem; text-align: center;">Github Repo Browser</h1>
+
+        <comp-search></comp-search>
+
+        <comp-result></comp-result>
+
+    </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    import CompSearch from './components/CompSearch';
+    import CompResult from './components/CompResult'
+
+    export default {
+        name      : 'app',
+        components: {
+            CompSearch,
+            CompResult
+        }
+    }
+
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
