@@ -4,7 +4,7 @@
         <div v-else>
             <comp-result-line v-for="(result, key) in data"
                               :name="result.name"
-                              :url="result.url"
+                              :url="result.clone_url"
                               :key="key">
             </comp-result-line>
         </div>
