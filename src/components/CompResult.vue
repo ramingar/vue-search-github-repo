@@ -1,21 +1,25 @@
 <template>
     <div>
-        <comp-result-line v-for="result in data" :name="result.name" :url="result.url"></comp-result-line>
+        <comp-result-line v-for="(result, key) in data"
+                          :name="result.name"
+                          :url="result.url"
+                          :key="key">
+        </comp-result-line>
     </div>
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
     import CompResultLine from './CompResultLine'
 
     export default {
         name      : "comp-result",
-        data() {
-            return {
-                data: [
-                    {name: 'repo1', url: 'url1'},
-                    {name: 'repo2', url: 'url2'},
-                    {name: 'repo3', url: 'url3'}
-                ]
+        methods   : {
+            ...mapGetters(['repos'])
+        },
+        computed  : {
+            data() {
+                return this.repos()
             }
         },
         components: {
