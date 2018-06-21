@@ -12,6 +12,7 @@
 
 <script>
     import {mapActions} from 'vuex'
+    import _ from 'lodash'
 
     export default {
         name   : "comp-search",
@@ -22,9 +23,12 @@
         },
         methods: {
             ...mapActions(['search']),
-            callSearch() {
-                this.search({textToLookFor: this.textToLookFor})
-            }
+            callSearch     : function () {
+                this.debouncedSearch(this);
+            },
+            debouncedSearch: _.debounce((self) => {
+                self.search({textToLookFor: self.textToLookFor})
+            }, 1200)
         }
     }
 </script>
