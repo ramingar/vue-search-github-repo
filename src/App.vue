@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container">
+    <div class="container-fluid app-container">
 
         <h1 class="app-header">Github Repo Browser</h1>
 
@@ -32,6 +32,10 @@
     .app-header {
         padding: 3rem 1.5rem;
         text-align: center;
+    }
+
+    .app-container {
+        max-width: 960px;
     }
 
 </style>
