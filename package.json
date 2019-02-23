@@ -1,6 +1,6 @@
 {
   "name": "vue-search-github-repo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,13 +8,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "vue": "^2.5.16",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-service": "^3.0.0-beta.15",
+    "@vue/cli-plugin-babel": "^3.4.1",
+    "@vue/cli-service": "^3.4.1",
     "vue-template-compiler": "^2.5.16"
   },
   "browserslist": [
